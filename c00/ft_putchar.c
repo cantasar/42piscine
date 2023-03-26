@@ -5,14 +5,14 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: ctasar <ctasar@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/03/23 10:39:51 by ctasar            #+#    #+#             */
-/*   Updated: 2023/03/23 12:57:12 by ctasar           ###   ########.fr       */
+/*   Created: 2023/03/25 17:23:37 by ctasar            #+#    #+#             */
+/*   Updated: 2023/03/25 17:23:41 by ctasar           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <unistd.h>
 
-void	ft_putchar(char c)
+void	ft_putchar(char a)
 {
-	write(1, &c, 1);
+	write(1, &a, 1);
 }

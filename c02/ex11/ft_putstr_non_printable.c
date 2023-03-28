@@ -1,37 +1,41 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   strlcpy.c                                          :+:      :+:    :+:   */
+/*   ft_putstr_non_printable.c                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: ctasar <ctasar@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/03/28 15:51:48 by ctasar            #+#    #+#             */
-/*   Updated: 2023/03/28 18:03:27 by ctasar           ###   ########.fr       */
+/*   Created: 2023/03/28 18:18:37 by ctasar            #+#    #+#             */
+/*   Updated: 2023/03/28 18:41:14 by ctasar           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdio.h>
+#include <unistd.h>
 
-unsigned int ft_strlcpy(char *dest, char *src, unsigned int size)
+void	ft_putchar(char a)
 {
-	int	i;
+	write(1, &a, 1);
+}
 
-	i = 0;
-	while (i < (size-1))
-	{
-		dest[i] = src[i];
-		i++;
-	}
-    printf("%s\n",dest);
-    printf("%s\n",src);
-	return (i);
+void ft_putstr_non_printable(char *str)
+{
+    int i;
+
+    i = 0;
+    while (str[i] != '\n')
+    {
+        if (!(str[i] >= '32' || str[i] <= '126'))
+        {
+            ft_putchar("\\");
+            ft_putchar(str[i]);
+        }
+        ft_putchar(str[i]);
+        i++;
+    }
+
 }
 
 int main()
 {
-	char a[10];
-	char b[] = "0123456789012345";
-	printf("%u", ft_strlcpy(a,b,11));
-    
-	return 0;
+    ft_putstr_non_printable("ıafıdasıud\ngadsj");
 }

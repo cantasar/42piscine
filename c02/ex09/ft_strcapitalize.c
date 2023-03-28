@@ -6,7 +6,7 @@
 /*   By: ctasar <ctasar@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/28 13:46:24 by ctasar            #+#    #+#             */
-/*   Updated: 2023/03/28 14:34:15 by ctasar           ###   ########.fr       */
+/*   Updated: 2023/03/28 18:03:13 by ctasar           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,18 +22,20 @@ char *ft_strcapitalize(char *str)
 	while (str[i] != '\0')
 	{
 		if (str[i] >= 65 && str[i] <= 90)
-		{
 			str[i] += 32;
-		}
+			
+        if (str[i] >= 'a' && str[i] <= 'z')
+        {
+            if (j == 1)
+                str[i] -= 32;
+                j = 0;
+        }
+        else if (str[i] >= '0' && str[i] <= '9')
+            j = 0;
+        else
+            j = 1;
+		
 		i++;
-	}
-	while (str[j] != '\0')
-	{
-		if (str[j] >= 65 && str[j] <= 90)
-		{
-			str[j] += 32;
-		}
-		j++;
 	}
 
 	return (str);

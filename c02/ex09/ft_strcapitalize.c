@@ -1,37 +1,46 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strupcase.c                                     :+:      :+:    :+:   */
+/*   ft_strcapitalize.c                                 :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: ctasar <ctasar@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/03/28 11:31:33 by ctasar            #+#    #+#             */
-/*   Updated: 2023/03/28 16:18:29 by ctasar           ###   ########.fr       */
+/*   Created: 2023/03/28 13:46:24 by ctasar            #+#    #+#             */
+/*   Updated: 2023/03/28 14:34:15 by ctasar           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <stdio.h>
 
-char *ft_strupcase(char *str)
+char *ft_strcapitalize(char *str)
 {
-	int	i;
-	int	kontrol;
+	int i;
+	int j;
 
 	i = 0;
-	kontrol = 0;
-	while (str [i] != '\0')
+	j = 0;
+	while (str[i] != '\0')
 	{
-		if (str[i] >= 97 && str[i] <= 122)
+		if (str[i] >= 65 && str[i] <= 90)
 		{
-			str[i] -= 32;
+			str[i] += 32;
 		}
 		i++;
 	}
+	while (str[j] != '\0')
+	{
+		if (str[j] >= 65 && str[j] <= 90)
+		{
+			str[j] += 32;
+		}
+		j++;
+	}
+
 	return (str);
 }
 
-int	main()
+int main()
 {
-	char a[] = "abcAAsadWasdasasJMdasIasOdMdefg";
-	printf("%s",ft_strupcase(a));
+	char a[] = "salUt, commAnt tu vas ? 42mots quArante-Deux; cinquante+et+un";
+	printf("%s", ft_strcapitalize(a));
 }

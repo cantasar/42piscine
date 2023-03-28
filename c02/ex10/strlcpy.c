@@ -1,37 +1,37 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strupcase.c                                     :+:      :+:    :+:   */
+/*   strlcpy.c                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: ctasar <ctasar@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/03/28 11:31:33 by ctasar            #+#    #+#             */
-/*   Updated: 2023/03/28 16:18:29 by ctasar           ###   ########.fr       */
+/*   Created: 2023/03/28 15:51:48 by ctasar            #+#    #+#             */
+/*   Updated: 2023/03/28 17:09:42 by ctasar           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <stdio.h>
 
-char *ft_strupcase(char *str)
+unsigned int ft_strlcpy(char *dest, char *src, unsigned int size)
 {
 	int	i;
-	int	kontrol;
 
 	i = 0;
-	kontrol = 0;
-	while (str [i] != '\0')
+	while (i < (size-1))
 	{
-		if (str[i] >= 97 && str[i] <= 122)
-		{
-			str[i] -= 32;
-		}
+		dest[i] = src[i];
 		i++;
 	}
-	return (str);
+    printf("%s\n",dest);
+    printf("%s\n",src);
+	return (i);
 }
 
-int	main()
+int main()
 {
-	char a[] = "abcAAsadWasdasasJMdasIasOdMdefg";
-	printf("%s",ft_strupcase(a));
+	char a[10];
+	char b[] = "0123456789012345";
+	printf("%u", ft_strlcpy(a,b,11));
+    
+	return 0;
 }

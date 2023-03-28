@@ -1,18 +1,18 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strupcase.c                                     :+:      :+:    :+:   */
+/*   ft_strlowcase.c                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: ctasar <ctasar@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/03/28 11:31:33 by ctasar            #+#    #+#             */
-/*   Updated: 2023/03/28 16:18:29 by ctasar           ###   ########.fr       */
+/*   Created: 2023/03/28 16:18:44 by ctasar            #+#    #+#             */
+/*   Updated: 2023/03/28 17:11:59 by ctasar           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <stdio.h>
 
-char *ft_strupcase(char *str)
+char *ft_strlowcase(char *str)
 {
 	int	i;
 	int	kontrol;
@@ -21,10 +21,11 @@ char *ft_strupcase(char *str)
 	kontrol = 0;
 	while (str [i] != '\0')
 	{
-		if (str[i] >= 97 && str[i] <= 122)
+		if (str[i] >= 65 && str[i] <= 90)
 		{
-			str[i] -= 32;
+			str[i] += 32;
 		}
+		
 		i++;
 	}
 	return (str);
@@ -32,6 +33,6 @@ char *ft_strupcase(char *str)
 
 int	main()
 {
-	char a[] = "abcAAsadWasdasasJMdasIasOdMdefg";
-	printf("%s",ft_strupcase(a));
+	char a[] = "abcAAWHUHIUGIJMIOMdefg";
+	printf("%s",ft_strlowcase(a));
 }

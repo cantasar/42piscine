@@ -6,7 +6,7 @@
 /*   By: ctasar <ctasar@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/28 11:12:49 by ctasar            #+#    #+#             */
-/*   Updated: 2023/03/28 11:12:53 by ctasar           ###   ########.fr       */
+/*   Updated: 2023/03/29 10:30:50 by ctasar           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -36,6 +36,6 @@ int	ft_str_is_numeric(char *str)
 
 int	main()
 {
-	char a[] = "dwawawda";
+	char a[] = "1232112";
 	printf("%d", ft_str_is_numeric(a));
 }

@@ -1,12 +1,12 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   : ft_str_is_uppercase.c                            :+:      :+:    :+:   */
+/*   ft_str_is_uppercase.c                              :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: ctasar <ctasar@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/28 11:13:28 by ctasar            #+#    #+#             */
-/*   Updated: 2023/03/28 11:14:17 by ctasar           ###   ########.fr       */
+/*   Updated: 2023/03/29 10:34:58 by ctasar           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -35,6 +35,6 @@ int	ft_str_is_uppercase(char *str)
 
 int	main ()
 {
-	char a[] = "dasdsda";
+	char a[] ="SFDHDS21321FDJDSFL";
 	printf("%d", ft_str_is_uppercase(a));
 }

@@ -6,7 +6,7 @@
 /*   By: ctasar <ctasar@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/28 16:18:44 by ctasar            #+#    #+#             */
-/*   Updated: 2023/03/28 17:11:59 by ctasar           ###   ########.fr       */
+/*   Updated: 2023/03/29 10:43:13 by ctasar           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -33,6 +33,6 @@ char *ft_strlowcase(char *str)
 
 int	main()
 {
-	char a[] = "abcAAWHUHIUGIJMIOMdefg";
+	char a[] = "abcAAWHUHI123123 //()?=&^'+UGIJMIOMdefg";
 	printf("%s",ft_strlowcase(a));
 }

@@ -6,7 +6,7 @@
 /*   By: ctasar <ctasar@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/28 11:12:46 by ctasar            #+#    #+#             */
-/*   Updated: 2023/03/28 11:12:59 by ctasar           ###   ########.fr       */
+/*   Updated: 2023/03/29 10:32:27 by ctasar           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -35,6 +35,6 @@ int	ft_str_is_lowercase(char *str)
 
 int	main()
 {
-	char a[] = "";
+	char a[] = "saddjkdn";
 	printf("%d", ft_str_is_lowercase(a));
 }

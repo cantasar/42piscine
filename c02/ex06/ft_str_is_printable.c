@@ -6,7 +6,7 @@
 /*   By: ctasar <ctasar@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/28 11:30:39 by ctasar            #+#    #+#             */
-/*   Updated: 2023/03/28 11:30:40 by ctasar           ###   ########.fr       */
+/*   Updated: 2023/03/29 10:37:13 by ctasar           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,10 +27,14 @@ int	ft_str_is_printable(char *str)
 		}
 		i++;
 	}
+	if (kontrol == i)
+		return (1);
+	else
+		return (0);
 }
 
 int	main()
 {
-	char a[] = "   sasdas 23121 \n";
+	char a[] = "   sasdas 23121 ";
 	printf("%d", ft_str_is_printable(a));
 }

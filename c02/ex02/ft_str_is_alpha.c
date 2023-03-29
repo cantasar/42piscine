@@ -6,7 +6,7 @@
 /*   By: ctasar <ctasar@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/27 18:16:02 by ctasar            #+#    #+#             */
-/*   Updated: 2023/03/27 18:16:04 by ctasar           ###   ########.fr       */
+/*   Updated: 2023/03/29 10:29:39 by ctasar           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,6 +31,6 @@ int ft_str_is_alpha(char *str)
 
 int main()
 {
-	char a[] = "aaaaaassssddddddff22222222ff";
+	char a[] = "aaaaaassssdddddf";
 	printf("%d", ft_str_is_alpha(a));
 }

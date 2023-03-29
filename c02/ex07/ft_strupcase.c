@@ -6,7 +6,7 @@
 /*   By: ctasar <ctasar@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/28 11:31:33 by ctasar            #+#    #+#             */
-/*   Updated: 2023/03/28 16:18:29 by ctasar           ###   ########.fr       */
+/*   Updated: 2023/03/29 10:40:02 by ctasar           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,6 +32,6 @@ char *ft_strupcase(char *str)
 
 int	main()
 {
-	char a[] = "abcAAsadWasdasasJMdasIasOdMdefg";
+	char a[] = "abcAAsa  -()& + dWa234324sdasasJMdasIasOdMdefg";
 	printf("%s",ft_strupcase(a));
 }

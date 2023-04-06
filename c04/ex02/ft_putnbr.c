@@ -1,9 +1,20 @@
-#include <stdio.h>
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_putnbr.c                                        :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: ctasar <ctasar@student.42.fr>              +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2023/04/06 19:57:51 by ctasar            #+#    #+#             */
+/*   Updated: 2023/04/06 22:26:31 by ctasar           ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #include <unistd.h>
 
-void	ft_putchar(char x)
+void	ft_putchar(char a)
 {
-	write(1, &x, 1);
+	write(1, &a, 1);
 }
 
 void	ft_putnbr(int nb)
@@ -22,21 +33,6 @@ void	ft_putnbr(int nb)
 	{
 		if (nb > 9)
 			ft_putnbr(nb / 10);
-		ft_putchar(48 + nb % 10);
+		ft_putchar(nb % 10 + 48);
 	}
-}
-
-int		main(void)
-{
-    ft_putnbr(1);
-    printf("\n");
-    ft_putnbr(0);
-    printf("\n");
-    ft_putnbr(-1);
-    printf("\n");
-    ft_putnbr(2147483647);
-    printf("\n");
-    ft_putnbr(-2147483648);
-    printf("\n");
-    return (0);
 }

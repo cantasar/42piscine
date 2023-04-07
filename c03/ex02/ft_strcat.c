@@ -1,4 +1,14 @@
-#include <stdio.h>
+/* ************************************************************************** */
+/*																			*/
+/*														:::	  ::::::::   */
+/*   ft_strcat.c										:+:	  :+:	:+:   */
+/*													+:+ +:+		 +:+	 */
+/*   By: ctasar <ctasar@student.42.fr>			  +#+  +:+	   +#+		*/
+/*												+#+#+#+#+#+   +#+		   */
+/*   Created: 2023/04/04 17:23:26 by ctasar			#+#	#+#			 */
+/*   Updated: 2023/04/05 10:53:35 by ctasar		   ###   ########.fr	   */
+/*																			*/
+/* ************************************************************************** */
 
 char	*ft_strcat(char *dest, char *src)
 {
@@ -9,7 +19,6 @@ char	*ft_strcat(char *dest, char *src)
 	j = 0;
 	while (dest[i] != '\0')
 		i++;
-
 	while (src[j] != '\0')
 	{
 		dest[i] = src [j];
@@ -18,11 +27,4 @@ char	*ft_strcat(char *dest, char *src)
 	}
 	dest[i] = '\0';
 	return (dest);
-}
-
-int	main()
-{
-	char src[] = "efgh";
-	char dest[6] = "abcd";
-	printf("%s", ft_strcat(dest, src));
 }

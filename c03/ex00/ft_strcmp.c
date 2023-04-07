@@ -1,20 +1,32 @@
-#include <stdio.h>
-#include <string.h>
+/* ************************************************************************** */
+/*																			*/
+/*														:::	  ::::::::   */
+/*   ft_strcmp.c										:+:	  :+:	:+:   */
+/*													+:+ +:+		 +:+	 */
+/*   By: ctasar <ctasar@student.42.fr>			  +#+  +:+	   +#+		*/
+/*												+#+#+#+#+#+   +#+		   */
+/*   Created: 2023/04/04 10:39:27 by ctasar			#+#	#+#			 */
+/*   Updated: 2023/04/06 22:53:40 by ctasar		   ###   ########.fr	   */
+/*																			*/
+/* ************************************************************************** */
 
 int	ft_strcmp(char *s1, char *s2)
 {
-	unsigned int	i;
+	int	i;
 
 	i = 0;
 	while (s1[i] == s2[i] && (s1[i] != '\0' || s2[i] != '\0'))
 	{
 		i++;
 	}
-	return (s1[i] - s2[i]);
-}
-
-int main()
-{
-	printf("%d",ft_strcmp("hello","hello world"));
-	printf("%d",strcmp("hello","hello world"));
+	if (s1[i] > s2[i])
+	{
+		return (1);
+	}
+	else if (s1[i] < s2[i])
+	{
+		return (-1);
+	}
+	else
+		return (0);
 }

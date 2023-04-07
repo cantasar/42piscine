@@ -1,5 +1,14 @@
-#include <stdio.h>
-#include <string.h>
+/* ************************************************************************** */
+/*																			*/
+/*														:::	  ::::::::   */
+/*   ft_strncmp.c									   :+:	  :+:	:+:   */
+/*													+:+ +:+		 +:+	 */
+/*   By: ctasar <ctasar@student.42.fr>			  +#+  +:+	   +#+		*/
+/*												+#+#+#+#+#+   +#+		   */
+/*   Created: 2023/04/04 17:13:39 by ctasar			#+#	#+#			 */
+/*   Updated: 2023/04/05 10:53:37 by ctasar		   ###   ########.fr	   */
+/*																			*/
+/* ************************************************************************** */
 
 int	ft_strncmp(char *s1, char *s2, unsigned int n)
 {
@@ -19,10 +28,4 @@ int	ft_strncmp(char *s1, char *s2, unsigned int n)
 		i++;
 	}
 	return (0);
-}
-
-int main()
-{
-	printf("%d",ft_strncmp("hello","hello world",8));
-	printf("%d",strncmp("hello","hello",8));
 }

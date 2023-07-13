@@ -1,22 +1,26 @@
-#include <stdio.h>
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_iterative_factorial.c                           :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: ctasar <ctasar@student.42.fr>              +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2023/04/11 12:26:56 by ctasar            #+#    #+#             */
+/*   Updated: 2023/04/11 12:51:40 by ctasar           ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
 
-int ft_iterative_factorial(int nb)
+int	ft_iterative_factorial(int nb)
 {
-    int a;
+	int		faktoriyel;
 
-    a=1;
-    if (nb < 0)
+	faktoriyel = 1;
+	if (nb < 0)
 		return (0);
-    while (nb>=1)
-    {
-        a = a * nb;
-        nb--;
-    }
-    return(a);
-}
-
-int main()
-{
-    printf("%d",ft_iterative_factorial(5));
-    return 0;
+	while (nb > 0)
+	{
+		faktoriyel = faktoriyel * nb;
+		nb--;
+	}
+	return (faktoriyel);
 }

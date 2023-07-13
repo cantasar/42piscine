@@ -6,38 +6,27 @@
 /*   By: ctasar <ctasar@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/28 15:51:48 by ctasar            #+#    #+#             */
-/*   Updated: 2023/03/29 17:47:57 by ctasar           ###   ########.fr       */
+/*   Updated: 2023/04/04 12:54:57 by ctasar           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdio.h>
-#include <string.h>
-
-unsigned int ft_strlcpy(char *dest, char *src, unsigned int size)
+unsigned int	ft_strlcpy(char *dest, char *src, unsigned int size)
 {
-	unsigned int	i;
-	unsigned int	j;
+	unsigned int	count;
+	unsigned int	index;
 
-	i = 0;
-	j = 0;
-	while (dest[i] != '\0')
-		i++;
-	while (j < (size - 1) && src[j] != '\0')
+	count = 0;
+	index = 0;
+	while (src[count] != '\0')
+		count++;
+	if (size != 0)
 	{
-		dest[j] = src[j];
-		j++;
+		while (src[index] != '\0' && index < (size - 1))
+		{
+			dest[index] = src[index];
+			index++;
+		}
+		dest[index] = '\0';
 	}
-	dest[j] = '\0';
-	i = 0;
-	while (src[i])
-		i++;
-	return (i);
-}
-
-int main()
-{
-	char a[15]; 
-	char b[] = "ydgsfsfdsgadsdasdas\n";
-	printf("%d",ft_strlcpy(a,b,12));
-	return (ft_strlcpy(a,b,12));
+	return (count);
 }

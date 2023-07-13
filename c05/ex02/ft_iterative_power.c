@@ -1,26 +1,34 @@
-#include <stdio.h>
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_iterative_power.c                               :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: ctasar <ctasar@student.42.fr>              +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2023/04/11 12:30:45 by ctasar            #+#    #+#             */
+/*   Updated: 2023/04/11 12:54:50 by ctasar           ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
 
-int ft_iterative_power(int nb, int power)
+int	ft_iterative_power(int nb, int power)
 {
 	int	i;
+	int	total;
 
-	i = 1;
-	if (power == 0)
-		return (1);
-	if (power == 1)
-		return (nb);
-	if (power <= -1)
-		return (0);
-	while (power > i)
+	i = 0;
+	total = 1;
+	if (power < 0)
 	{
-		nb = nb * nb;
+		return (0);
+	}
+	if (nb == 0 && power == 0)
+	{
+		return (1);
+	}
+	while (i < power)
+	{
+		total = total * nb;
 		i++;
 	}
-	return (nb);
-}
-
-int main()
-{
-    printf("%d",ft_iterative_power(12,2));
-    return 0;
+	return (total);
 }

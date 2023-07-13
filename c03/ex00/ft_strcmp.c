@@ -5,8 +5,8 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: ctasar <ctasar@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/04/10 13:05:16 by ctasar            #+#    #+#             */
-/*   Updated: 2023/04/10 13:11:35 by ctasar           ###   ########.fr       */
+/*   Created: 2023/04/12 08:11:46 by ctasar            #+#    #+#             */
+/*   Updated: 2023/04/12 08:11:48 by ctasar           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,18 +15,9 @@ int	ft_strcmp(char *s1, char *s2)
 	unsigned int	i;
 
 	i = 0;
-	while (s1[i] == s2[i] && (s1[i] != '\0' || s2[i] != '\0'))
+	while (s1[i] == s2[i] && s1[i] && s2[i])
 	{
 		i++;
 	}
-	if (s1[i] > s2[i])
-	{
-		return (1);
-	}
-	else if (s1[i] < s2[i])
-	{
-		return (-1);
-	}
-	else
-		return (0);
+	return (s1[i] - s2[i]);
 }

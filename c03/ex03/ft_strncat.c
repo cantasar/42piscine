@@ -5,26 +5,25 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: ctasar <ctasar@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/04/10 13:07:51 by ctasar            #+#    #+#             */
-/*   Updated: 2023/04/10 13:11:39 by ctasar           ###   ########.fr       */
+/*   Created: 2023/04/12 08:12:10 by ctasar            #+#    #+#             */
+/*   Updated: 2023/04/12 08:19:08 by ctasar           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-char	*ft_strncat(char *dest, const char *src, unsigned int nb)
+char	*ft_strncat(char *dest, char *src, unsigned int nb)
 {
-	unsigned int	l_dest;
-	unsigned int	i;
+	unsigned int		c;
+	unsigned int		d;
 
-	l_dest = 0;
-	i = 0;
-	while (dest[l_dest] != '\0')
-		l_dest++;
-	while (src[i] != '\0' && i < nb)
+	c = 0;
+	d = 0;
+	while (dest[c] != '\0')
+		c++;
+	while (src[d] != '\0' && d < nb)
 	{
-		dest[l_dest] = src[i];
-		l_dest++;
-		i++;
+		dest[c + d] = src[d];
+		d++;
 	}
-	dest[l_dest] = '\0';
+	dest[c + d] = '\0';
 	return (dest);
 }

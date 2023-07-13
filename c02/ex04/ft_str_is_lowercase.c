@@ -6,11 +6,9 @@
 /*   By: ctasar <ctasar@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/28 11:12:46 by ctasar            #+#    #+#             */
-/*   Updated: 2023/03/29 10:32:27 by ctasar           ###   ########.fr       */
+/*   Updated: 2023/03/29 12:56:47 by ctasar           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
-
-#include <stdio.h>
 
 int	ft_str_is_lowercase(char *str)
 {
@@ -31,10 +29,4 @@ int	ft_str_is_lowercase(char *str)
 		return (1);
 	else
 		return (0);
-}
-
-int	main()
-{
-	char a[] = "saddjkdn";
-	printf("%d", ft_str_is_lowercase(a));
 }

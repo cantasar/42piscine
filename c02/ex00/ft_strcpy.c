@@ -6,11 +6,9 @@
 /*   By: ctasar <ctasar@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/27 17:11:44 by ctasar            #+#    #+#             */
-/*   Updated: 2023/03/27 17:24:07 by ctasar           ###   ########.fr       */
+/*   Updated: 2023/03/29 12:47:13 by ctasar           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
-
-#include <stdio.h>
 
 char	*ft_strcpy(char *dest, char *src)
 {
@@ -25,13 +23,3 @@ char	*ft_strcpy(char *dest, char *src)
 	dest[i] = '\0';
 	return (dest);
 }
-
-int main()
-{
-	char a[] = "kdsjask";
-	char b[] = "dskfd";
-	printf("%s", ft_strcpy(a,b));
-
-	return 0;
-}
-

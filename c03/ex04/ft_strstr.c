@@ -5,41 +5,31 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: ctasar <ctasar@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/04/07 02:03:46 by ctasar            #+#    #+#             */
-/*   Updated: 2023/04/10 13:11:38 by ctasar           ###   ########.fr       */
+/*   Created: 2023/04/12 08:12:16 by ctasar            #+#    #+#             */
+/*   Updated: 2023/04/12 08:12:17 by ctasar           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int ft_strlen(char *str)
+char	*ft_strstr(char *str, char *to_find)
 {
-	int i;
+	int	i;
+	int	x;
 
 	i = 0;
-	while (str[i])
-		i++;
-	return (i);
-}
-
-char *ft_strstr(char *str, char *to_find)
-{
-	int i;
-	int j;
-	int k;
-
-	i = 0;
-
-	while (str[i])
+	if (to_find[0] == 0)
 	{
-		j = 0;
-		k = i;
-		while (str[k] == to_find[j] && to_find[j])
+		return (str);
+	}
+	while (str[i] != 0)
+	{
+		x = 0;
+		while (str[i + x] == to_find[x] && str[i + x] != '\0')
 		{
-			j++;
-			k++;
-		}
-		if (to_find[j]=='\0')
-		{
-			return (&str[i]);
+			if (to_find[x + 1] == 0)
+			{
+				return (&str[i]);
+			}
+			x++;
 		}
 		i++;
 	}

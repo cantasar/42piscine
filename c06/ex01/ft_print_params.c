@@ -1,40 +1,33 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strcat.c                                        :+:      :+:    :+:   */
+/*   ft_print_params.c                                  :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: ctasar <ctasar@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/04/12 08:12:02 by ctasar            #+#    #+#             */
-/*   Updated: 2023/04/12 08:12:03 by ctasar           ###   ########.fr       */
+/*   Created: 2023/04/12 03:10:18 by ctasar            #+#    #+#             */
+/*   Updated: 2023/04/12 03:10:19 by ctasar           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int	ft_strlen(char *str)
+#include <unistd.h>
+
+int	main(int argc, char **argv)
 {
-	int	say;
+	int	i;
+	int	j;
 
-	say = 0;
-	while (str[say] != '\0')
+	i = 1;
+	j = 0;
+	while (i < argc)
 	{
-		say++;
+		j = 0;
+		while (argv[i][j] != '\0')
+		{
+			write(1, &argv[i][j], 1);
+			j++;
+		}
+		i++;
+		write(1, "\n", 1);
 	}
-	return (say);
-}
-
-char	*ft_strcat(char *dest, char *src)
-
-{
-	int		a;
-	int		b;
-
-	a = 0;
-	b = ft_strlen(dest);
-	while (src[a] != '\0')
-	{
-		dest[a + b] = src[a];
-		a++;
-	}
-	dest[a + b] = '\0';
-	return (dest);
 }
